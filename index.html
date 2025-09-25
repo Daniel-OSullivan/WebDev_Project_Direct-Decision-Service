@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB DEVELOPMENT PROJECT</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheels on Fire</title>
+  <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a sample paragraph to demonstrate the HTML structure.</p>
-    <button id="myButton">Click Me!</button>
+  <div class="video-container">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="images/00024.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Auctions</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">For Sale</a></li>
+        <li><a href="components/collection.html">Collection</a></li>
+      </ul>
+    </nav>
 
-    <script src="script.js"></script>
-    
+    <!-- Landing page content -->
+    <div class="content">
+      <h1>Wheels on Fire</h1>
+      <p>Engaging tagline goes here</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </div>
 </body>
 </html>
