@@ -36,6 +36,8 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /*filter:opacity(60%);*/
+  z-index: 0;
 }
 
 /* Overlay */
@@ -45,7 +47,8 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4); /* Dark overlay */
+  background: rgba(0,0,0,0.7); /* Dark overlay */
+  z-index: 1;
 }
 
 /* Navbar */
@@ -90,10 +93,11 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
+  z-index: 2;
 }
 
 .content h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   margin-bottom: 20px;
   font-family: 'Rattless'
 }

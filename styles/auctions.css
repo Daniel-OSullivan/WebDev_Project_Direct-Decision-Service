@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Rattles';
+  src: url('../fonts/Rattless.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.h1{
+    position: relative;
+    align-items: center;
+    font-family: 'Rattless';
+}
