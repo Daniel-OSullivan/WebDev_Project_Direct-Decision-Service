@@ -1,0 +1,19 @@
+/* This is selecting the font for the whole web page */
+@font-face {
+  font-family: 'Rattles';
+  src: url('../fonts/Rattless.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.p{
+    font-family: "Rattless";
+}
+
+.titlebtn{
+    font-family: "Rattless";
+}
+.txtbox1{
+  font-family: "Rattless";
+  height: 80px;
+  font-size: 300px;
+}
