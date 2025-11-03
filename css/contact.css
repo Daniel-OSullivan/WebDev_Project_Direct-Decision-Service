@@ -41,7 +41,7 @@ p{
 
 .input-container {
   padding: 2px;
-  border-radius: 8px;
+  border-radius: 20px;
   max-width: 400px;
   margin: auto;
 }
@@ -95,21 +95,67 @@ p{
   color: #ffcc00;
 }
 
+.label{
+  text-align: center;
+}
+
 @media only screen and (min-width:1300px){
   .car1 {
   
     width: 23rem;   
     height: auto;
+    border: 0.15rem solid white;
     border-radius: 10px;
-   position:absolute;
-   top: 130px;
-   right: 20px;
+    position:absolute;
+    top: 130px;
+    right: 20px;
+  }
+  
+  .car2 {
 
+    width: 23rem;
+    height: auto;
+    border: 0.15rem solid white;
+    border-radius: 10px;
+    position:absolute;
+    top: 450px;
+    right: 20px;
+  }
+
+  .car3 {
+
+    width: 23rem;
+    height: auto;
+    border: 0.15rem solid white;
+    border-radius: 10px;
+    position:absolute;
+    top: 130px;
+    left: 20px;
+  }
+
+  .car4 {
+
+    width: 23rem;
+    height: auto;
+    border: 0.15rem solid white;
+    border-radius: 10px;
+    position:absolute;
+    top: 450px;
+    left: 20px;
   }
 }
 
 @media only screen and (max-width:1299px){
   .car1 {
+    display:none;
+  }
+  .car2 {
+    display:none;
+  }
+  .car3 {
+    display:none;
+  }
+  .car4 {
     display:none;
   }
 }
