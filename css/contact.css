@@ -1,34 +1,38 @@
-/* This is selecting the font for the whole web page */
+/* I am setting the font and background colour*/
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #1a1a1a; 
   color: #e0e0e0; 
 }
-
+/*Creating the header of the website*/
 header {
+  font-weight: bold;
   background-color: #0f0f0f; 
   padding: 40px 20px;
   text-align: center;
   border-bottom: 2px solid #333;
 }
 
-
+/*Centring header*/
 h1{
+  font-weight: bold;
   text-align: center;
 }
+/*Centering and making bold all paragraphs*/
 p{ 
   text-align: center;
-  
+  font-weight: bold;
+
 }
-.name-input{
+/*Styling for the email input */
+.email-input{
   display: flex;
   flex-direction: column;
   align-items: center;
   
-
-
 }
+/*Styling the gender options*/
 .genderOptions{
   display: flex;
   flex-direction: column;
@@ -90,14 +94,21 @@ p{
   color: #ffcc00;
 }
 
+@media only screen and (min-width:1300px){
+  .car1 {
+  
+    width: 23rem;   
+    height: auto;
+    border-radius: 10px;
+   position:absolute;
+   top: 130px;
+   right: 20px;
 
-.car1 {
-  width: 400px;   
-  height: auto;
-  border-radius: 10px;
-  position:absolute;
-  top: 130px;
-  right: 20px;
-
+  }
 }
- 
+
+@media only screen and (max-width:1299px){
+  .car1 {
+    display:none;
+  }
+}
