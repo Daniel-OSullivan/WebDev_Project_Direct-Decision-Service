@@ -14,21 +14,21 @@ header {
   border-bottom: 2px solid #333;
 }
 
-/*Centring header*/
+/*Centring header and making bold*/
 h1{
   font-weight: bold;
   text-align: center;
 }
-/*Centering and making bold all paragraphs*/
+/*Centering all paragraphs*/
 p{ 
   text-align: center;
-  font-weight: bold;
+  
 
 }
 /*Styling for the email input */
 .email-input{
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*Arranged from top to bottom */
   align-items: center;
   
 }
@@ -37,20 +37,14 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-.titlebtn{
-  text-align: center;
-  
-
-}
 .input-container {
   padding: 2px;
   border-radius: 8px;
   max-width: 400px;
   margin: auto;
-    }
+}
 
 #paragraphBox{
   width: 100%;
@@ -60,9 +54,9 @@ p{
   line-height: 1.5;
   resize: vertical; 
   box-sizing: border-box;
-    }
+}
 
-  .navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -71,12 +65,19 @@ p{
   padding: 20px 50px;
   display: flex;
   justify-content: center;
-  
+  background-color: #0f0f0f;
 }
+
 .navbar ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 600px;     
+  width: 100%;
+  justify-content: center; 
 }
+
 
 .navbar ul li {
   margin-left: 30px;
