@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="contact.css">
-
-
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheels on Fire</title>
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+</head>
 <body>
-
-<nav class="navbar">
+  
+    <!-- Navbar -->
+    <nav class="navbar">
       <ul>
-        <li><a href="../components/index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="sale.html">For Sale</a></li>
@@ -18,56 +22,64 @@
       </ul>
     </nav>
 
-
-<title>Contact Us</title>
-<header></header>
-<h1>Get in touch with Wheels On Fire</h1>
-
-
+    <!-- Landing page content -->
+    <div class="image-container">
+          <img src="../media/image.jpg" class="background-image" alt="background image">
+    <div class="overlay"></div>
 
 
-  <div class="name-input">
-    <form>
-      <label for="name">Enter your Email:</label>
-      <input type="nameText" id="name" name="name" placeholder="johndoe@gmail.com">
-      <input type="submit" value="Submit">
-    </form>
+    <div class="content">
+      <h1>Contact Us</h1>
+      <p></p>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
   </div>
 
+  
 
-<div class="genderOptions"> 
-<label for="gender">Enter your gender</label>
-<select id="gender" name="gender">
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-  <option value="NonBinary">Non-binary</option>
-  <option value="PreferNotToSay">Prefer not to say</option>
-  <option value="Other">Other</option>
-</select>
-</div>
 
-        
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-text">Got a question? Drop it below.</p>
 
-<p>Enter Your Issue Below</p>
-<div class="input-container">
-    <form>
-      <label for="userInput">Enter your message:</label>
-      <textarea id="paragraphBox" placeholder="Type your concerns here..."></textarea>
+    <!-- Single form with one submit at the bottom -->
+    <form id="contact-form" action="#" method="post">
+      <div class="name-input">
+        <label for="email">Enter your Email:</label>
+        <!-- fix: use type="email" so it picks up the dark input styles -->
+        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+      </div>
+
+      <div class="genderOptions">
+        <label for="gender">Enter your gender</label>
+        <select id="gender" name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="NonBinary">Non-binary</option>
+          <option value="PreferNotToSay">Prefer not to say</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="input-container">
+        <label for="message">Enter your message:</label>
+        <textarea id="message" name="message" placeholder="Type your concerns here..." required></textarea>
+      </div>
+
+      <!-- only one submit button -->
       <input type="submit" value="Submit">
     </form>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="brand">Wheels on Fire</div>
+    <p class="contact-line">For any inquiries please contact us</p>
+    <p class="contact-details"><span>Phone:</span> 086-123-1234 • <span>Email:</span> DDS@Gmail.com</p>
+    <small>© 2025 Wheels on Fire. All rights reserved.</small>
   </div>
-
-<p> For any Inquiries Please contact us our</p>
-<p>Phone Number</p>
-<p>086-123-1234</p>
-
-<p>Email <br> DDS@Gmail.com</p>
-
-<div class="cars">
-<img src="https://images.pexels.com/photos/27968213/pexels-photo-27968213.jpeg?cs=srgb&dl=pexels-lynxexotics-27968213.jpg&fm=jpg&_gl=1*1t6in48*_ga*MTMxMDUzNTc3MS4xNzU5NzYyMTc4*_ga_8JE65Q40S6*czE3NTk3NjIxNzgkbzEkZzEkdDE3NTk3NjIyMTEkajI3JGwwJGgw" alt="car1" class="car1">
-</div>
-
-
+</footer>
 </body>
 </html>
-

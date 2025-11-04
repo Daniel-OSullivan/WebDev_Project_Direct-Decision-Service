@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'Rattles';
+  src: url('../fonts/Rattless.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Google Font (Alumni Sans Pinstripe) */
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
+}
+
+/* Dark overlay placed over the image to increase white text contrast */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  /*background: rgba(0,0,0,0.3); /* Slight transparency */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-family: 'Rattless';
+}
+
+.navbar ul li a:hover {
+  color: #ffcc00;
+}
+
+
+
+/* Centered title section */
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content h1 {
+  font-size: 8rem;
+  margin-bottom: 20px;
+  font-family: 'Rattless';
+  color: #fff;
+}
+
+
+.btn {
+  padding: 10px 25px;
+  background-color: white;
+  opacity: 0.4;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Rattless';
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+
+/* Contact page background (radial rose → black) */
+.contact-gradient {
+  min-height: 100svh;                     /* full viewport height */
+  background: #de1b42;
+  background: radial-gradient(circle, rgba(222,27,66,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* If the overlay blocks clicks/visibility, keep it inert */
+.overlay { pointer-events: none; }
+
+/* contact page */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* Contact title under hero */
+.contact-title {
+  font-family: 'Rattless';
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Smaller intro paragraph */
+.contact-text,
+.second-paragraph {
+  font-size: 2rem;
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Alumni Sans Pinstripe';
+  margin-bottom: 40px;
+}
+
+
+.name-input,
+.genderOptions,
+.input-container {
+  width: 95%;          
+  max-width: 1400px;   
+  margin: 25px auto;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #dcdcdc;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #0f0f0f;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.15s ease, transform 0.08s ease;
+}
+
+/* Highlight on focus to make UI feel more interactive */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 8px rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  display: block;                 
+  margin: 10px auto 0;          
+  padding: 8px 18px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: #232323;
+  transform: translateY(-2px);
+}
+
+/* Make the email input full-width and on its own line */
+.email {
+  display: block;                 /* forces its own line */
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #0f0f0f;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  margin: 6px 0 12px;             /* small gap from label and next element */
+}
+
+/* ----- Footer (black, centered, clean) ----- */
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 16px;
+  color: #d7d7d7;
+}
+
+.site-footer .footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.site-footer .brand {
+  font-family: 'Rattles';
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+.site-footer .contact-details span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Gradient only for the bottom (form) section */
+.contact-section.form-gradient {
+  /* rose → black radial */
+  background: #000; /* fallback */
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,27,66,1) 100%);
+  padding: 40px 20px;        /* breathing room so the gradient is visible */
+  position: relative;        /* keeps it separate from the hero area */
+}
+
+/* Ensure the wrapper inside stays transparent so the section’s gradient shows */
+.contact-section.form-gradient .container {
+  background: transparent;
+}
+
+/* If your .container sits OUTSIDE the section (alternate structure), use this instead: */
+/* .container.form-gradient { background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,27,66,1) 100%); } */
+
+@media (max-width: 700px) {
+  .content h1 { font-size: 4rem; }
+  .contact-text { font-size: 1.5rem; }
+  .container { padding: 40px 10px; }
+  .site-footer { padding: 20px 12px; }
+  .site-footer .brand { font-size: 1.1rem; }
+  .site-footer .contact-details { font-size: 0.95rem; }
+}
