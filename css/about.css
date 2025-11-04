@@ -65,6 +65,7 @@ html, body {
   z-index: 2;
   text-align: center;
   padding: 1rem;
+  gap: 12px; /* consistent spacing between h1 and button */
 }
 
 .content h1 {
@@ -72,11 +73,22 @@ html, body {
   margin-bottom: 20px;
   font-family: 'Rattless';
   color: #fff;
+  transform: translateY(-150px); /* your current offset */
+}
+
+/* Move the button up a bit */
+.content .btn {
+  transform: translateY(-180px);
+}
+
+@media (max-width: 600px) {
+  .content h1 { transform: translateY(-10px); }
+  .content .btn { transform: translateY(-8px); }
 }
 
 
 .btn {
-  padding: 10px 25px;
+  padding: 10px 15px;
   background-color: white;
   opacity: 0.4;
   color: #000;
@@ -84,7 +96,7 @@ html, body {
   font-family: 'Rattless';
   font-size: 1.5rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 500px;
   transition: background 0.3s;
 }
 
