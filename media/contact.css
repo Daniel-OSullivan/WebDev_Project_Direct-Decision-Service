@@ -1,0 +1,169 @@
+/* I am setting the font and background colour*/
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a; 
+  color: #e0e0e0; 
+}
+/*Creating the header of the website*/
+header {
+  font-weight: bold;
+  background-color: #0f0f0f; 
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+/*Centring header*/
+h1{
+  font-weight: bold;
+  text-align: center;
+}
+/*Centering and making bold all paragraphs*/
+p{ 
+  text-align: center;
+  font-weight: bold;
+
+}
+/*Styling for the email input */
+.email-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+/*Styling the gender options*/
+.genderOptions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.titlebtn{
+  text-align: center;
+  
+
+}
+.input-container {
+  padding: 2px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+    }
+
+#paragraphBox{
+  width: 100%;
+  height: 180px; 
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  resize: vertical; 
+  box-sizing: border-box;
+    }
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  /*background: rgba(0,0,0,0.3); /* Slight transparency */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-family: 'Rattless';
+}
+
+.navbar ul li a:hover {
+  color: #ffcc00;
+}
+
+@media only screen and (min-width:1300px){
+  .car1 {
+  
+    width: 23rem;   
+    height: auto;
+    border-radius: 10px;
+   position:absolute;
+   top: 130px;
+   right: 20px;
+
+<<<<<<<< HEAD:css/contact.css
+  }
+}
+
+@media only screen and (max-width:1299px){
+  .car1 {
+    display:none;
+  }
+========
+/* Video container */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*filter:opacity(60%);*/
+  z-index: 0;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7); /* Dark overlay */
+  z-index: 1;
+}
+
+
+.car1 {
+  width: 400px;   
+  height: auto;
+  border-radius: 10px;
+  position:absolute;
+  top: 130px;
+  right: 20px;
+
+}
+ 
+.container{
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  padding: 0 20px;
+
+>>>>>>>> 0636225210f6acd1d36fce3cbd09e04ac65036cf:media/contact.css
+}
