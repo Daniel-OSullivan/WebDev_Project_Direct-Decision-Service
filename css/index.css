@@ -1,34 +1,43 @@
 /* Full page reset */
 
+/* Local display font */
 @font-face {
-  font-family: 'Rattles';
+  font-family: 'Rattless';
   src: url('../fonts/Rattless.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+/* Google Font (Alumni Sans Pinstripe) */
 .alumni-sans-pinstripe-regular {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .alumni-sans-pinstripe-regular-italic {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body, html {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Full-height section utility (handles mobile address bar correctly) */
+.vh-full {
+  min-height: 100vh;   /* fallback */
+  min-height: 100svh;  /* small viewport on iOS */
+  min-height: 100dvh;  /* dynamic viewport (newer browsers) */
+  display: flex;       /* optional: lets you vertically center content */
+  align-items: center; /* center vertically */
 }
 
 /* Video container */
@@ -42,48 +51,34 @@ body, html {
 /* Video */
 .background-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
-  /*filter:opacity(60%);*/
   z-index: 0;
 }
 
 /* Overlay */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7); /* Dark overlay */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
   z-index: 1;
 }
 
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   z-index: 2;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
-  /*background: rgba(0,0,0,0.3); /* Slight transparency */
+  /* background: rgba(0,0,0,0.3); */
 }
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
-
-.navbar ul li {
-  margin-left: 30px;
-}
-
+.navbar ul { display: flex; list-style: none; }
+.navbar ul li { margin-left: 30px; }
 .navbar ul li a {
   text-decoration: none;
   color: #fff;
@@ -91,10 +86,7 @@ body, html {
   transition: color 0.3s;
   font-family: 'Rattless';
 }
-
-.navbar ul li a:hover {
-  color: #ffcc00;
-}
+.navbar ul li a:hover { color: #ffcc00; }
 
 /* Landing page content */
 .content {
@@ -104,20 +96,16 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  z-index: 2;
 }
-
 .content h1 {
   font-size: 8rem;
   margin-bottom: 20px;
-  font-family: 'Rattless'
+  font-family: 'Rattless';
 }
-
 .content p {
   font-size: 1.5rem;
   margin-bottom: 40px;
 }
-
 .btn {
   padding: 10px 25px;
   background-color: white;
@@ -130,59 +118,151 @@ body, html {
   border-radius: 5px;
   transition: background 0.3s;
 }
-
 .btn:hover {
   background-color: #ffffff;
   opacity: 0.8;
 }
 
-.container{
+/* About container */
+.container {
   width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0);
-  padding: 0 20px;
-
-}
-
-.featured-car-title{
-  font-family: 'Rattless';
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 20px;
-  padding-top: 30px;
-  color: #fff;
-}
-
-.featured-car-text{
-  padding-top: 80px;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #fff;
-  max-width: 800px;
-  font-family: 'Alumni Sans Pinstripe';
-  font-size: 2rem;
-}
-
-.second-paragraph{
-  padding-top: 40px;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #fff;
-  max-width: 800px;
-  font-family: 'Alumni Sans Pinstripe';
-  font-size: 2rem;
-}
-
-
-.car-image{
-  display: block;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
-  z-index: 2;
-  position: absolute;
-  right: 10%;
-  top: 120%;
-
+  padding: 80px 20px; /* was 60px 20px */
 }
+
+/* Two-column layout: text left, card right */
+.feature-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 32px;
+}
+.feature-copy { text-align: left; }
+
+/* Card container aligned to the right */
+.ca-image {
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible; /* allow extra width */
+}
+
+/* Aesthetic card */
+.car-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0d0d0d, #111);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.car-card__img {
+  height: 260px; /* shorter image */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.02);
+  transition: transform .5s ease;
+}
+.car-card:hover .car-card__img { transform: scale(1.02); }
+.car-card__info {
+  padding: 16px 18px 20px;
+  display: grid;
+  gap: 8px;
+  text-align: center;
+}
+.car-card__title {
+  font-family: 'Rattless', cursive;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: #fff;
+}
+.car-card__meta {
+  color: #cfcfcf;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  letter-spacing: .3px;
+}
+.car-card__btn {
+  justify-self: center;
+  margin-top: 6px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#ff7a59,#ffcc66);
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .12s ease, opacity .12s ease;
+}
+.car-card__btn:hover { transform: translateY(-2px); opacity: .95; }
+
+/* Text beside the card */
+.feature-copy .featured-car-title {
+  font-family: 'Rattless', cursive;
+  font-size: clamp(2.6rem, 7vw, 4rem); /* larger */
+  line-height: 1.05;
+  margin-bottom: 16px; /* extra space above paragraph */
+  color: #fff;
+}
+@media (min-width: 900px) {
+  .feature-copy .featured-car-title {
+    margin-top: -10px; /* sit slightly above the card/text */
+  }
+}
+.feature-copy .featured-car-text {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;  /* changed from Alumni Sans */
+  font-size: clamp(1.2rem, 2vw, 1.6rem);       /* larger */
+  line-height: 1.6;                             /* a bit tighter than 1.8 */
+  color: #e6e6e6;
+  margin-top: 10px;
+}
+
+.feature-copy .second-paragraph {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;        /* changed from Alumni Sans */
+  font-size: clamp(1.2rem, 2vw, 1.6rem);       /* larger */
+  line-height: 1.6;
+  color: #e6e6e6;
+  margin-top: 16px;
+}
+
+/* Footer */
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 16px;
+  color: #d7d7d7;
+}
+.site-footer .footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-footer .brand {
+  font-family: 'Rattless';
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+.site-footer .contact-details span { color: #fff; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .feature-layout { grid-template-columns: 1fr; gap: 24px; }
+  .feature-copy { text-align: center; }
+  .ca-image { justify-content: center; }
+}
+
+@media (max-width: 700px) {
+  .site-footer { padding: 20px 12px; }
+  .site-footer .brand { font-size: 1.1rem; }
+  .site-footer .contact-details { font-size: 0.95rem; }
+}
+
+/* Bottom gradient utility */
+.bottom-gradient {
+  background: #000000;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(232,212,28,1) 100%);
+}
+
+span { font-weight: bold; text-decoration: underline; }
+
+
