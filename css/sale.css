@@ -1,0 +1,294 @@
+/* ---------------------------------------------
+   SALE PAGE — Consistent with Wheels on Fire site
+   --------------------------------------------- */
+
+/* Local font */
+@font-face {
+  font-family: 'Rattless';
+  src: url('../fonts/Rattless.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital,wght@0,400;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- Navbar (same as site) ---------- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  /* background: rgba(0,0,0,0.3); */
+}
+.navbar ul { display: flex; list-style: none; }
+.navbar ul li { margin-left: 30px; }
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-family: 'Rattless';
+}
+.navbar ul li a:hover { color: #ffcc00; }
+
+.navbar ul li a:hover { color: #ffcc00; }
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(232,212,28,1) 100%);
+  text-align: center;
+  padding: 160px 20px 80px;
+  color: #fff;
+}
+
+header h1 {
+  font-family: 'Rattless';
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 1.6rem;
+  color: #f1f1f1;
+}
+
+/* ---------- Opener Section ---------- */
+.opener {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: #0d0d0d;
+}
+
+.opener h2 {
+  font-family: 'Rattless';
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 18px;
+  color: #ffcc00;
+}
+
+.opener p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #e6e6e6;
+}
+
+/* ---------- Sale Grid ---------- */
+.sale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 80px 40px;
+  background: #000;
+}
+
+.car {
+  background: linear-gradient(180deg, #0d0d0d, #111);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.car:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.car img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: saturate(1.1) contrast(1.05);
+  transition: transform .5s ease;
+}
+
+.car:hover img {
+  transform: scale(1.05);
+}
+
+.car-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.car-info h3 {
+  font-family: 'Rattless';
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  color: #ffcc00;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+  margin-right: 8px;
+}
+
+.new-price {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #ff7a59, #ffcc66);
+  border: none;
+  border-radius: 8px;
+  color: #111;
+  font-family: 'Rattless';
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* ---------- Closer Section ---------- */
+.closer {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(232,212,28,1) 100%);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.closer h2 {
+  font-family: 'Rattless';
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.closer p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #f1f1f1;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 16px;
+  color: #d7d7d7;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.site-footer .brand {
+  font-family: 'Rattless';
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.site-footer .contact-line {
+  font-size: 1.1rem;
+}
+
+.site-footer .contact-details span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.site-footer small {
+  color: #888;
+  margin-top: 10px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .navbar ul { flex-direction: column; gap: 10px; }
+  header { padding-top: 120px; }
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2.2rem; }
+  .opener h2, .closer h2 { font-size: 1.8rem; }
+  .btn { font-size: 1rem; }
+}
+/* ---------- Featured Lamborghini Styling ---------- */
+
+/* Target the first car in the sale grid (Lamborghini) */
+.sale-grid .car:first-child {
+  grid-column: span 2;           /* Makes it take up two columns */
+  grid-row: span 2;              /* Optional: makes it taller on large screens */
+  position: relative;
+}
+
+.sale-grid .car:first-child img {
+  height: 400px;                 /* Bigger image */
+  object-fit: cover;
+}
+
+.sale-grid .car:first-child .car-info h3 {
+  font-size: 2.2rem;             /* Bigger title */
+  color: #ffcc00;                /* Highlighted text color */
+}
+
+.sale-grid .car:first-child .car-info .new-price {
+  color: #ffb300;                /* Gold for contrast */
+  font-size: 1.5rem;
+}
+
+/* Add a subtle "Featured Deal" badge */
+.sale-grid .car:first-child::before {
+  content: "★ Featured Deal";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(90deg, #ff7a59, #ffcc66);
+  color: #111;
+  font-weight: bold;
+  font-family: 'Rattless';
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Make sure it still looks good on smaller screens */
+@media (max-width: 900px) {
+  .sale-grid .car:first-child {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .sale-grid .car:first-child img {
+    height: 250px;
+  }
+}
