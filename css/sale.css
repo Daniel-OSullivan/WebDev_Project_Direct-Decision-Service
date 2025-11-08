@@ -230,42 +230,30 @@ header p {
   margin-top: 10px;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .navbar ul { flex-direction: column; gap: 10px; }
-  header { padding-top: 120px; }
-}
-
-@media (max-width: 600px) {
-  header h1 { font-size: 2.2rem; }
-  .opener h2, .closer h2 { font-size: 1.8rem; }
-  .btn { font-size: 1rem; }
-}
 /* ---------- Featured Lamborghini Styling ---------- */
 
-/* Target the first car in the sale grid (Lamborghini) */
 .sale-grid .car:first-child {
-  grid-column: span 2;           /* Makes it take up two columns */
-  grid-row: span 2;              /* Optional: makes it taller on large screens */
+  grid-column: span 2;           
+  grid-row: span 2;             
   position: relative;
 }
 
 .sale-grid .car:first-child img {
-  height: 400px;                 /* Bigger image */
+  height: 400px;                 
   object-fit: cover;
 }
 
 .sale-grid .car:first-child .car-info h3 {
-  font-size: 2.2rem;             /* Bigger title */
-  color: #ffcc00;                /* Highlighted text color */
+  font-size: 2.2rem;             
+  color: #ffcc00;                
 }
 
 .sale-grid .car:first-child .car-info .new-price {
-  color: #ffb300;                /* Gold for contrast */
+  color: #ffb300;             
   font-size: 1.5rem;
 }
 
-/* Add a subtle "Featured Deal" badge */
+/* Add a "Featured Deal" badge */
 .sale-grid .car:first-child::before {
   content: "★ Featured Deal";
   position: absolute;
@@ -279,16 +267,4 @@ header p {
   border-radius: 6px;
   font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-/* Make sure it still looks good on smaller screens */
-@media (max-width: 900px) {
-  .sale-grid .car:first-child {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-
-  .sale-grid .car:first-child img {
-    height: 250px;
-  }
 }
