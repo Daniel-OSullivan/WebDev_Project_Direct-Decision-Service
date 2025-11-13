@@ -264,3 +264,37 @@ header p {
   font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
+
+/* ---------- Mobile Adjustments ---------- */
+@media (max-width: 768px) {
+  .sale-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .sale-grid .car:first-child {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .sale-grid .car:first-child img {
+    height: 220px;
+  }
+
+  .sale-grid .car:first-child .car-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .sale-grid .car:first-child .car-info .new-price {
+    font-size: 1.3rem;
+    color: #ffcc00;
+  }
+
+  .sale-grid .car:first-child::before {
+    font-size: 1rem;
+    padding: 6px 12px;
+    top: 10px;
+    left: 10px;
+  }
+}
