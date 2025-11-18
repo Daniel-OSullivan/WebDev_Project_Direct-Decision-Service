@@ -101,13 +101,14 @@ body, html {
   font-size: 8rem;
   margin-bottom: 20px;
   font-family: 'Rattless';
+  font-weight: bold;
 }
 .content p {
   font-size: 1.5rem;
   margin-bottom: 40px;
 }
 .btn {
-  padding: 10px 25px;
+  padding: 10px 15px;
   background-color: white;
   opacity: 0.4;
   color: #000;
@@ -115,7 +116,7 @@ body, html {
   font-family: 'Rattless';
   font-size: 1.5rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background 0.3s;
 }
 .btn:hover {
