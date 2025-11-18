@@ -1,59 +1,22 @@
-/* I am setting the font and background colour*/
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a1a; 
-  color: #e0e0e0; 
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding-top: 80px;
 }
-/*Creating the header of the website*/
+
 header {
-  font-weight: bold;
-  background-color: #0f0f0f; 
+  background-color: #0f0f0f;
   padding: 40px 20px;
   text-align: center;
   border-bottom: 2px solid #333;
 }
 
-/*Centring header and making bold*/
-h1{
+h1 {
   font-weight: bold;
   text-align: center;
-}
-/*Centering all paragraphs*/
-p{ 
-  text-align: center;
-  
-
-}
-/*Styling for the email input */
-.email-input{
-  display: flex;
-  flex-direction: column; /*Arranged from top to bottom */
-  align-items: center;
-  
-}
-/*Styling the gender options*/
-.genderOptions{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.input-container {
-  padding: 2px;
-  border-radius: 20px;
-  max-width: 400px;
-  margin: auto;
-}
-
-#paragraphBox{
-  width: 100%;
-  height: 180px; 
-  padding: 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  resize: vertical; 
-  box-sizing: border-box;
 }
 
 .navbar {
@@ -62,25 +25,18 @@ p{
   left: 0;
   width: 100%;
   z-index: 2;
-  padding: 20px 50px;
+  padding: 1rem 2rem;
+  background-color: #0f0f0f;
   display: flex;
   justify-content: center;
-  background-color: #0f0f0f;
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  gap: 1.5rem;
   padding: 0;
-  max-width: 600px;     
-  width: 100%;
-  justify-content: center; 
-}
-
-
-.navbar ul li {
-  margin-left: 30px;
+  margin: 0;
 }
 
 .navbar ul li a {
@@ -88,74 +44,124 @@ p{
   color: #fff;
   font-weight: bold;
   transition: color 0.3s;
-  font-family: 'Rattless';
 }
 
 .navbar ul li a:hover {
   color: #ffcc00;
 }
 
-.label{
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.grid-container > div {
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 0.5rem;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input[type="email"],
+select,
+textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 10rem;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  background-color: #ece3e3;
+  color: #030303;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #fbbd02;
+}
+
+/* Images */
+.top-left-image img,
+.top-right-image img,
+.row3-left-image img,
+.row3-right-image img {
+  width: 100%;
+  max-width: 30rem;
+  border: 2px solid white;
+  border-radius: 0.625rem;
+}
+
+.row3-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info p {
   text-align: center;
+  margin: 0.5rem 0;
 }
 
-@media only screen and (min-width:1300px){
-  .car1 {
-  
-    width: 23rem;   
-    height: auto;
-    border: 0.15rem solid white;
-    border-radius: 10px;
-    position:absolute;
-    top: 130px;
-    right: 20px;
-  }
-  
-  .car2 {
-
-    width: 23rem;
-    height: auto;
-    border: 0.15rem solid white;
-    border-radius: 10px;
-    position:absolute;
-    top: 450px;
-    right: 20px;
-  }
-
-  .car3 {
-
-    width: 23rem;
-    height: auto;
-    border: 0.15rem solid white;
-    border-radius: 10px;
-    position:absolute;
-    top: 130px;
-    left: 20px;
-  }
-
-  .car4 {
-
-    width: 23rem;
-    height: auto;
-    border: 0.15rem solid white;
-    border-radius: 10px;
-    position:absolute;
-    top: 450px;
-    left: 20px;
-  }
+/* Car Gallery */
+.cars {
+  grid-column: 1 / span 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-@media only screen and (max-width:1299px){
-  .car1 {
-    display:none;
+.cars img {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 0.625rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
-  .car2 {
-    display:none;
+
+  .top-left-image,
+  .top-right-image,
+  .row3-left-image,
+  .row3-right-image,
+  .cars {
+    display: none;
   }
-  .car3 {
-    display:none;
+
+  .row3-center,
+  .email-input {
+    grid-column: 1 / -1;
+    width: 100%;
+    align-items: stretch;
   }
-  .car4 {
-    display:none;
+
+  .grid-container > div {
+    background-color: transparent;
+    padding: 0.5rem;
   }
 }

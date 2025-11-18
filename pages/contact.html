@@ -1,74 +1,72 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../css/contact.css">
-
-
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
 <body>
 
-  <!--The NavBar-->
-<nav class="navbar">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="sale.html">Sale</a></li>
+    </ul>
+  </nav>
 
-<!--Title-->
-<title>Contact Us</title>
-<header></header>
-<!--Heading-->
-<h1><strong><u>Get in touch with Wheels On Fire</u></strong></h1>
+  <!-- Header -->
+  <header>
+    <h1><strong><u>Get in touch with Wheels On Fire</u></strong></h1>
+  </header>
 
+  <!-- Grid Layout -->
+  <main class="grid-container">
+    <!-- Row 2 -->
+    <div class="top-left-image">
+      <img src="../media/car3.jpg" alt="Top Left Car" />
+    </div>
 
+    <div class="email-input">
+      <form>
+        <label for="email"><u><strong>Enter your Email:</strong></u></label>
+        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
 
-<!--Email input-->
-  <div class="email-input">
-    <form>
-      <label for="name">Enter your Email:<br></label>
-      <input type="nameText" id="email" name="email" placeholder="johndoe@gmail.com">
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+    <div class="top-right-image">
+      <img src="../media/car4.jpg" alt="Top Right Car" />
+    </div>
 
+    <!-- Row 3 -->
+    <div class="row3-left-image">
+      <img src="../media/car6.jpg" alt="Left Side Car" />
+    </div>
 
-<!--Gender Form-->
-<div class="genderOptions"> 
-<label for="gender">Enter your gender</label>
-<select id="gender" name="gender">
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-  <option value="NonBinary">Non-binary</option>
-  <option value="PreferNotToSay">Prefer not to say</option>
-  <option value="Other">Other</option>
-</select>
-</div>
+    <div class="row3-center">
+      <div class="input-container">
+        <form>
+          <label for="paragraphBox"><strong><u>Enter your message:</u></strong></label>
+          <textarea id="paragraphBox" name="message" placeholder="Type your concerns here..." required></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="contact-info">
+        <p><strong><u>Phone Number</u></strong><br>086-123-1234</p>
+        <p><strong><u>Email</u></strong><br>DDS@Gmail.com</p>
+      </div>
+    </div>
 
-        
-<!--TextBox-->
-<p>Enter Your Issue Below</p>
-<div class="input-container">
-    <form>
-      <label for="userInput"><strong><u>Enter your message:</u></strong></label>
-      <textarea id="paragraphBox" placeholder="Type your concerns here..."></textarea>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+    <div class="row3-right-image">
+      <img src="../media/car5.jpg" alt="Right Side Car" />
+    </div>
 
-<p> For any Inquiries Please contact us at our</p>
-<p><strong><u>Phone Number</u></strong></p>
-<p>086-123-1234</p>
-<p><strong><u>Email</u></strong> <br> DDS@Gmail.com</p>
-
-<div class="cars">
-<img src="..\media\car5.jpg" alt="car" class="car1">
-<img src="..\media\car6.jpg" alt="car" class="car2">
-<img src="..\media\car3.jpg" alt="car" class = "car3">
-<img src="..\media\car4.jpg" alt="car" class = "car4">
-</div>
-
+    
+  </main>
 
 </body>
 </html>
