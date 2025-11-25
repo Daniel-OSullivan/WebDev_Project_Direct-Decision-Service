@@ -73,10 +73,16 @@ html, body {
   margin-bottom: 20px;
   font-family: 'Rattless';
   color: #fff;
-  transform: translateY(-150px); /* your current offset */
+
+  /* move the title slightly upward */
+  transform: translateY(-20px);
 }
 
-/* Move the button up a bit */
+/* smaller offset on small screens */
+@media (max-width: 600px) {
+  .content h1 { transform: translateY(-10px); }
+}
+
 .content .btn {
   transform: translateY(-180px);
 }
