@@ -100,6 +100,48 @@ input[type="submit"]:hover {
   background-color: #fbbd02;
 }
 
+/* Dropdown and error styling */
+.form select,
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #999 50%),
+                    linear-gradient(135deg, #999 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+/* error text */
+.error {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  min-height: 1.1em;
+}
+
+/* invalid input highlight */
+.invalid {
+  box-shadow: 0 0 0 3px rgba(255,107,107,0.08);
+  border-color: #ff6b6b;
+}
+
 /* Images */
 .top-left-image img,
 .top-right-image img,

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
   <link rel="stylesheet" href="../css/contact.css" />
+  <script src="../scripts/index.js"></script>
 </head>
 <body>
 
@@ -32,25 +33,37 @@
     </div>
 
     <div class="form">
-      <form>
-        <label for="firstName"><u><strong>Enter your first name:</strong></u></label>
-        <input type="text" id="firstName" placeholder="John" required />
+      <form id="contactForm" novalidate>
+        <label for="firstName">Enter your first name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="John" required aria-describedby="firstNameError" />
+        <small class="error" id="firstNameError" aria-live="polite"></small>
 
-        <label for="firstName"><u><strong>Enter your second name:</strong></u></label>
-        <input type="text" id="firstName" placeholder="Doe" required />
-        
+        <label for="lastName">Enter your last name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Doe" required aria-describedby="lastNameError" />
+        <small class="error" id="lastNameError" aria-live="polite"></small>
 
-      
-    
-      
-        <label for="email"><u><strong>Enter your Email:</strong></u></label>
-        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required />
-        
-      
-      
-        <label for="paragraphBox"><strong><u>Enter your message:</u></strong></label>
-        <textarea id="paragraphBox" name="message" placeholder="Type your concerns here..." required></textarea>
-        <input type="submit" value="Submit" />
+        <label for="email">Enter your Email:</label>
+        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required aria-describedby="emailError" />
+        <small class="error" id="emailError" aria-live="polite"></small>
+
+        <!-- Reason dropdown -->
+        <label for="reason">Reason for contacting:</label>
+        <select id="reason" name="reason" required aria-describedby="reasonError">
+          <option value="" disabled selected>Select a reason</option>
+          <option value="general">General inquiry</option>
+          <option value="sales">Sales / Enquiry</option>
+          <option value="viewing">Book a viewing / Test drive</option>
+          <option value="support">After-sales support</option>
+          <option value="partnerships">Advertising / Partnerships</option>
+          <option value="other">Other</option>
+        </select>
+        <small class="error" id="reasonError" aria-live="polite"></small>
+
+        <label for="paragraphBox">Enter your message:</label>
+        <textarea id="paragraphBox" name="message" placeholder="Type your concerns here..." required aria-describedby="messageError"></textarea>
+        <small class="error" id="messageError" aria-live="polite"></small>
+
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </div>
 
