@@ -75,7 +75,7 @@ html, body {
   color: #fff;
 
   /* move the title slightly upward */
-  transform: translateY(-20px);
+  transform: translateY(-100px);
 }
 
 /* smaller offset on small screens */
